@@ -32,12 +32,4 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 // Navbar Sticky
 
-// Scroll Reveal
-const sr = ScrollReveal({
-   origin: "top",
-   distance: "40px",
-   duration: 500,
-   reset: true,
-});
 
-sr.reveal(".box", { interval: 200 });
