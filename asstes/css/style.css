@@ -319,7 +319,7 @@ h6 {
 ========================================== */
 
 .header-section {
-   background: url(../img/header.jpg);
+   background-image: url(../img/header.jpg);
    background-size: cover;
    background-position: center;
 }
@@ -399,26 +399,8 @@ h6 {
    border-radius: .25rem;
    padding: 22px 48px 12px 48px;
    position: relative;
-   overflow-x: clip;
-   transition: all .7s ease;
 }
 
-.categories_wrap .box_content .box::after {
-   content: '';
-   position: absolute;
-   width: 60%;
-   height: 100%;
-   left: -100%;
-   bottom: 0;
-   clip-path: polygon(50% 0%, 100% 0%, 50% 100%, 0% 100%);
-   background: var(--white-color);
-   transition: all .7s ease;
-}
-
-.categories_wrap .box_content .box:hover::after {
-   left: 100%;
-   transition: all .7s ease;
-}
 
 @media only screen and (min-width: 992px) {
    .categories_wrap .box_content>div {
@@ -487,7 +469,7 @@ h6 {
    font-size: 16px;
    font-weight: 600;
    left: 50%;
-   bottom: -7%;
+   bottom: -8%;
    transform: translateX(-50%);
    display: none;
    box-shadow: 0 -2px 0 0 rgba(24, 24, 24, .2) inset;
@@ -564,7 +546,8 @@ h6 {
 
 .popular_wrap .box .price {
    color: var(--light-orange-color);
-   display: block ruby;
+   display: flex;
+   align-items: center;
    font-weight: 600;
    margin-top: .8rem;
    font-size: 1em;
