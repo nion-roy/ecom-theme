@@ -397,7 +397,7 @@ h6 {
 
 .categories_wrap .box_content .box {
    border-radius: .25rem;
-   padding: 22px 48px 12px 48px;
+   padding: 22px 44px 12px 44px;
    position: relative;
 }
 
@@ -632,7 +632,7 @@ h6 {
 
 .contact_wrap .row {
    width: 80%;
-   padding: 4rem 0;
+   padding: 4rem 2rem;
    border-radius: .5rem;
    align-items: center;
    justify-content: center;
@@ -830,6 +830,14 @@ footer {
 @media only screen and (min-width: 768px) and (max-width: 991px) {
    .col-lg-2.col-sm-6.col-12.my-2.m-lg-0 {
       width: 33%;
+   }
+
+   .categories_wrap .box_content .btn {
+      bottom: -6%;
+   }
+
+   .contact_wrap .row {
+      width: 90%;
    }
 }
 
