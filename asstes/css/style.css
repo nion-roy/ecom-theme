@@ -670,12 +670,18 @@ h6 {
    margin-bottom: 2rem;
 }
 
-.contact_wrap .form-group {
-   position: relative;
-   margin-bottom: 2rem;
+.contact_wrap .textarea-group textarea {
+   width: 100%;
+   height: 40px;
 }
 
-.contact_wrap .form-group textarea,
+.contact_wrap .textarea-group,
+.contact_wrap .form-group {
+   position: relative;
+   margin-bottom: 2.1rem;
+}
+
+.contact_wrap .textarea-group textarea,
 .contact_wrap .form-group input {
    width: 100%;
    height: 100%;
@@ -683,38 +689,7 @@ h6 {
    border: none;
    outline: none;
    background: none;
-   border-bottom: 2px solid black;
-}
-
-.contact_wrap .form-group label {
-   font-size: 14px;
-   color: var(--light-black-color);
-}
-
-.contact_wrap .form-group .underline {
-   position: absolute;
-   bottom: 0;
-   height: 2px;
-   width: 100%;
-}
-
-.contact_wrap .form-group .underline::after {
-   content: '';
-   position: absolute;
-   height: 100%;
-   width: 100%;
-   bottom: 0;
-   background: var(--green-color);
-   transform: scale(0, 1);
-   transform-origin: 0% 100%;
-   transition: all 0.3s ease;
-}
-
-.contact_wrap .form-group input:focus~.underline::after,
-.contact_wrap .form-group input:valid~.underline::after,
-.contact_wrap .form-group textarea:focus~.underline::after,
-.contact_wrap .form-group textarea:valid~.underline::after {
-   transform: scale(1, 1);
+   border-bottom: 2px solid var(--light-black-color);
 }
 
 .contact_wrap .form-group label {
