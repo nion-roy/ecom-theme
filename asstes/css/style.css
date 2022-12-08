@@ -36,21 +36,21 @@ body {
 }
 
 /* Only Chrome */
-html::-webkit-scrollbar {
+*::-webkit-scrollbar {
    width: 4px;
 }
 
-html::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
    background-color: rgb(255, 126, 0, 1);
    border-radius: 16px;
 }
 
-html::-webkit-scrollbar-track {
-   background-color: rgb(60, 184, 21, .5);
+*::-webkit-scrollbar-track {
+   background-color: transparent;
 }
 
 ::-webkit-scrollbar-button {
-   background-color: rgb(60, 184, 21, .5);
+   background-color: transparent;
 }
 
 /* Only IE */
@@ -62,7 +62,7 @@ html {
 
 /* Only FireFox */
 html {
-   scrollbar-color: rgb(255, 126, 0, 1) rgb(60, 184, 21, .5);
+   scrollbar-color: rgb(255, 126, 0, 1) transparent;
 }
 
 /* scrollbar */
@@ -282,16 +282,18 @@ h6 {
 }
 
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (max-width: 991px) {
    .nav_wrap .nav {
       position: absolute;
       width: 100%;
       height: auto;
-      top: -680px;
+      top: 68px;
       left: 0%;
       background: #dfe4ea;
       flex-direction: column;
       text-align: center;
+      opacity: 0;
+      visibility: hidden;
       -webkit-transition: top .3s ease-out;
       -moz-transition: top .3s ease-out;
       -o-transition: top .3s ease-out;
@@ -300,7 +302,8 @@ h6 {
    }
 
    .nav_wrap .nav.active {
-      top: 68px;
+      opacity: 1;
+      visibility: visible;
       -webkit-transition: top .3s ease-out;
       -moz-transition: top .3s ease-out;
       -o-transition: top .3s ease-out;
@@ -318,21 +321,15 @@ h6 {
 02. start header
 ========================================== */
 
-.header-section {
-   background-image: url(../img/header.jpg);
+/* .header-section {
+   background-image: url(../img/fruit.png);
    background-size: cover;
    background-position: center;
-}
+} */
 
 .header_wrap {
-   height: 90vh;
+   padding: 6rem 0;
    position: relative;
-}
-
-.header_wrap .header_content {
-   position: absolute;
-   top: 50%;
-   transform: translateY(-50%);
 }
 
 .header_wrap .header_content h2 {
@@ -817,30 +814,6 @@ footer {
 }
 
 @media only screen and (max-width: 767px) {
-   .nav_wrap .nav {
-      position: absolute;
-      width: 100%;
-      height: auto;
-      top: -680px;
-      left: 0%;
-      background: #dfe4ea;
-      z-index: 999;
-      flex-direction: column;
-      text-align: center;
-      -webkit-transition: top .3s ease-out;
-      -moz-transition: top .3s ease-out;
-      -o-transition: top .3s ease-out;
-      transition: top .3s ease-out;
-   }
-
-   .nav_wrap .nav.active {
-      top: 68px;
-      -webkit-transition: top .3s ease-out;
-      -moz-transition: top .3s ease-out;
-      -o-transition: top .3s ease-out;
-      transition: top .3s ease-out;
-   }
-
    .categories_wrap .box_content .btn {
       bottom: -4%;
    }
